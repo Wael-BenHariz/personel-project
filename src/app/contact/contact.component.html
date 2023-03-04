@@ -1,0 +1,70 @@
+<div class="container-fluid main pt-2">
+    
+    <div *ngIf="sent == false">
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="row justify-content-center col-xl-6 col-md-12 mb-5">
+
+            <form class="form col-xl-8 col-md-6 col-xs-6">
+                <div class="text-center title">
+                    <h3 style="color: #005a81">Contact</h3>
+                </div>
+
+                <div class="ligne">
+                    <div class="ligne-item">
+                        <label for="name" class="mb-3">Nom et prénom</label>
+                        <input type="text" [(ngModel)]="newMessage.nomMessage" name="name" id="name" class="ligne-form mb-3">
+                    </div>
+                </div>
+                <div class="ligne">
+                    <div class="ligne-item">
+                        <label for="email" class="mb-3">Email</label>
+                        <input type="email" [(ngModel)]="newMessage.emailMessage" name="email" id="email" class="ligne-form mb-3">
+                    </div>
+                </div>
+                <div class="ligne">
+                    <div class="ligne-item">
+                        <label for="subject" class="mb-3">Sujet</label>
+                        <input type="text" [(ngModel)]="newMessage.sujetMessage" name="sujet" id="subject" class="ligne-form mb-3">
+                    </div>
+                </div>
+                <div class="ligne">
+                    <div class="ligne-item">
+                        <label for="message" class="mb-3">Message</label>
+                        <textarea id="message" [(ngModel)]="newMessage.contenuMessage" name="contenu" rows="5" class="mb-3"></textarea>
+                    </div>
+                </div>
+                <div class="ligne-btn">
+                    <button class="btn-ent" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="sendMessage()">Envoyé</button>
+                </div>
+            </form>
+
+        </div>
+        <div class="row justify-content-center col-xl-4 col-md-5 mb-5">
+            <img class="image" src="./assets/undraw_dev_focus_re_6iwt.svg" width="50%" alt="contact">
+        </div>
+    </div>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-body">
+                <div *ngIf="sent ; else problem">
+                    <div class="alert alert-success">
+                        <strong><i class="fas fa-check-circle fa-lg me-2"></i></strong> Votre message envoyé avec succès
+                    </div>
+                </div>
+                <ng-template #problem>
+                    <div class="alert alert-danger">
+                        <strong><i class="fas fa-check-circle fa-lg me-2"></i></strong> Votre message n'est pas envoyé
+                    </div>
+                </ng-template>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn-emp" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>

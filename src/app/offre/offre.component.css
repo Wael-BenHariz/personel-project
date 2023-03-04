@@ -1,0 +1,30 @@
+.font-sans-serif{
+    font-family: sans-serif;
+}
+
+.user-contact-desc {
+    margin-left: 20px;
+}
+
+.user-contact-desc div:first-child {
+    margin-top: 20px;
+    font-size: 15px;
+}
+
+
+
+.user-contact-desc div:last-child {
+    margin-top: -15px;
+    font-size: small;
+}
+
+
+.user-contact-image {
+    margin-top: 15px;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    padding: 2px;
+}
+.user-contact-image img{
+    width: 45px;
+}

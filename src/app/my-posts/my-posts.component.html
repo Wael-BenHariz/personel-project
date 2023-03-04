@@ -1,0 +1,28 @@
+<div class="container-fluid main">
+  <div class="container-fluid main">
+    <div class="text-muted mb-3 pt-3">
+      <h2 style="font-family: sans-serif">Mes offres</h2>
+    </div>
+    <div class="row">
+      <div *ngIf="myPostsCount == 0; else show">
+        <h2 class="text-center">Aucune donnée disponible</h2>
+      </div>
+      <ng-template #show>
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Titre de l'offre</th>
+              <th scope="col">Nombre de postulations</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let offre of listOffres; let i = index">
+              <td data-label="Titre de l'offre"> {{offre.titreOffre}} </td>
+              <td data-label="Nombre de postulations"> {{countArray[i]}} </td>
+            </tr>
+          </tbody>
+        </table>
+      </ng-template>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,10 @@
+.alert-message {
+    color: #0f5132;
+    background-color: #d1e7dd;
+    border-color: #badbcc;
+    height: 50px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

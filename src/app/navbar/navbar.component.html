@@ -1,0 +1,36 @@
+<header>
+    <nav class="navbar">
+        <span class="navlogo">
+            <img src="./assets/logo.PNG" alt="logo">
+        </span>
+
+        <input type="checkbox" id="check">
+        <label for="check">
+            <i class="fa fa-bars"></i>
+        </label>
+
+        <ul>
+            <li  *ngIf="auth.isConnected == false"><a routerLink="home">Accueil</a></li>
+            <li><a routerLink="offres">Offres</a></li>
+            <li><a routerLink="contact">Contact</a></li>
+            <li><a href="javascript: void(0)">A propos</a></li>
+            <li *ngIf="auth.isConnected == true">
+
+                <div class="dropdown">
+                    <small class="me-2">{{auth.loggedUser}}</small>
+                    <button class="dropbtn"><i class="fas fa-angle-down fa-lg"></i></button>
+                    <div class="dropdown-content">
+                        <a *ngIf="auth.isConnected == true && auth.loggedUserRole == 'EMP' " href="#"><small><i class="fas fa-user-circle me-1"></i> Mon compte</small></a>
+                        <a *ngIf="auth.isConnected == true && auth.loggedUserRole == 'ENT' " href="#"><small><i class="fas fa-caret-right me-1"></i> Espace entreprise </small></a>
+                        <a *ngIf="auth.isConnected == true && auth.loggedUserRole == 'ENT' " routerLink="newjob"><small><i class="fas fa-caret-right me-1"></i> Ajouter Offre</small></a>
+                        <a *ngIf="auth.isConnected == true && auth.loggedUserRole == 'ENT' " routerLink="myposts"><small><i class="fas fa-caret-right me-1"></i> Mes Offres</small></a>
+                        <a *ngIf="auth.isConnected == true && auth.loggedUserRole == 'ENT' " routerLink="posts"><small><i class="fas fa-caret-right me-1"></i> Postulations</small></a>
+                        <hr style="margin-bottom: 0px;">
+                        <a (click)="auth.logoutUser()"><small><i class="fas fa-sign-out-alt me-1"></i> Déconnexion</small></a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+
+    </nav>
+</header>

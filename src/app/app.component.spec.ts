@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'OutilGestionProjetClientSide-master'`, () => {
+  it(`should have as title 'application-gestion-clinet-side'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('OutilGestionProjetClientSide-master');
+    expect(app.title).toEqual('application-gestion-clinet-side');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('OutilGestionProjetClientSide-master app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('application-gestion-clinet-side app is running!');
   });
 });

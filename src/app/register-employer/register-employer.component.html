@@ -1,0 +1,93 @@
+<div class="container-fluid main pt-2">
+    <div class="row justify-content-center">
+        <div class= "row justify-content-center col-xl-6 col-md-12 mb-5">
+            <form class="form col-xl-12 col-md-6 col-xs-6">
+                <div class="text-center title">
+                    <h3 style="color: #005a81">Creér un compte employé</h3>
+                </div>
+                
+                <div class="ligne">
+                    <div class="ligne-item">
+                        <label for="name" class="mb-3">Nom</label>
+                        <input type="text" id="name" [(ngModel)]="newEmp.nomCondidat" name="nom" class="ligne-form mb-3">
+                    </div>
+                </div>
+                <div class="ligne">
+                    <div class="ligne-item">
+                        <label for="lastname" class="mb-3">Prénom</label>
+                        <input type="text" [(ngModel)]="newEmp.prenomCondidat" name="prenom" id="lastname" class="ligne-form mb-3">
+                    </div>
+                </div>
+                <div class="ligne">
+                    <div class="ligne-item">
+                        <label for="email" class="mb-3">Email</label>
+                        <input type="email" [(ngModel)]="newEmp.emailCondidat" name="email" id="email" class="ligne-form mb-3">
+                    </div>
+                </div>
+
+                <div class="ligne">
+                    <div class="ligne-item">
+                        <label for="tel" class="mb-3">Téléphone</label>
+                        <input type="tel" id="tel" [(ngModel)]="newEmp.telephoneCondidat" name="tel" class="ligne-form mb-3">
+                    </div>
+                </div>
+                <div class="ligne">
+                    <div class="ligne-item">
+                        <label for="login" class="mb-3">Identifiant</label>
+                        <input type="text" id="login" [(ngModel)]="newEmp.loginCondidat" name="login" class="ligne-form mb-3">
+                    </div>
+                </div>
+                <div class="ligne">
+                    <div class="ligne-item">
+                        <label for="password" class="mb-3">Mot de passe</label>
+                        <input type="password" [(ngModel)]="newEmp.passwordCondidat" name="password" id="password" class="ligne-form mb-3">
+                    </div>
+                </div>
+                <div class="ligne">
+                    <div class="ligne-item">
+                        <label for="password" class="mb-3">Confirmer mot de passe</label>
+                        <input type="password" [(ngModel)]="confirmPwd" name="confirmpassword" id="confirmpassword" class="ligne-form mb-3">
+                    </div>
+                </div>
+                <div class="ligne-btn mb-3">
+                    <button class="btn-ent" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="onRegister()">Creér</button>
+                </div>
+                <div class="ms-1">
+                    <small>Vous avez déjà un compte ? <a routerLink="/loginemp"> Connexion</a></small>
+                </div>
+            </form>
+
+        </div>
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-body">
+                    <div *ngIf="created ; else problem">
+                        <div class="alert alert-success">
+                            <strong><i class="fas fa-check-circle fa-lg me-2"></i></strong> Compte creé
+                        </div>
+                    </div>
+                    <ng-template #problem>
+                        <div *ngIf="pwdError ; else other">
+                            <div class="alert alert-danger">
+                                <strong><i class="fas fa-check-circle fa-lg me-2"></i></strong> Confirmation de mot de passe invalide
+                            </div>
+                        </div>
+                        
+                    </ng-template>
+                    
+                    <ng-template #other>
+                        <div class="alert alert-danger">
+                            <strong><i class="fas fa-check-circle fa-lg me-2"></i></strong> Problem de création
+                        </div>
+                    </ng-template>
+                    
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn-emp" data-bs-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+</div>

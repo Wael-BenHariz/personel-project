@@ -1,1 +1,311 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+    padding:0 ;
+    margin: 0 ;
+    box-sizing: border-box;
+}
+
+header {
+    height: 80px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+}
+
+.navbar{
+    background-color: #EFEFEF ;
+    height: 80px;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2);
+}
+
+.navbar .navlogo img{
+    height: 80px;
+    width: 80px ;
+    margin-top: -5px;
+    margin-left: 25px;
+}
+
+
+
+.navbar ul{
+    float: right;
+    margin-right: 50px;
+    transition: all .3s ease-out;
+}
+
+.navbar ul li{
+    display: inline-block;
+    margin: 0px 5px ;
+    font-family: sans-serif ;
+    cursor: pointer ;
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color: #005a81;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.navbar ul li a:hover{
+    background-color: rgba(0,0,0,0.1);
+}
+
+
+.navbar label {
+    float: right ;
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+    line-height: 80px;
+    margin-right: 50px;
+    font-weight: bold;
+    color: #005a81;
+}
+.navbar #check {
+    display: none;
+}
+
+
+.main {
+    min-height: calc(100vh - 80px) ;
+    margin-top: 80px;
+    background-color: #EFEFEF;
+    
+}
+
+.main .background {
+    height: 500px;
+    background-image: url(./assets/jobmeet1.jpg);
+    background-repeat: no-repeat ;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+}
+
+.main .description {
+    font-family: sans-serif;
+    font-weight: bold;
+    margin-bottom: 50px;
+    letter-spacing: 2.2px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.main .description p {
+    text-align: center;
+    color: #005a81 ;
+}
+
+.main .block {
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
+    background-color: #fff ;
+}
+
+.main .block .desc {
+    min-height: 100px;
+}
+
+.main .block .title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main .block .title small{
+    text-align: center;
+    font-size: 18px; 
+    width: 120px;
+    font-family: sans-serif;
+    border: 1px solid #005a81;
+    background-color: #005a81;
+    color: #FFF;
+    border-radius: 20px;
+    padding: 5px;
+    margin-top: -15px;
+}
+
+.btn-emp {
+    display: block ;
+    height: 45px ;
+    width: 160px ;
+    border-radius: 3px;
+    border: 1px solid #33b9e8;
+    background-color: #fff;
+    color: #33b9e8 ;
+}
+
+.btn-ent {
+    display: block ;
+    height: 45px ;
+    width: 160px ;
+    border-radius: 3px;
+    border: none;
+    background-color: #33b9e8;
+    color: #fff ;
+}
+
+.main .block h4 {
+    font-family: sans-serif;
+}
+
+.main .block a {
+    text-decoration: none;
+}
+
+.btn-emp:hover,
+.btn-ent:hover {
+    box-shadow: 0px 4px 8px 1px rgba(0, 0, 0, 0.09), 6px 6px 20px 6px rgba(0, 0, 0, 0.09);
+}
+
+
+.form {
+    border-radius: 3px;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.form .title {
+    width: 100%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+}
+
+.form .ligne {
+    width: 100%;
+}
+
+.form .ligne label ,
+.form .ligne input {
+    display: block;
+}
+
+.form .ligne input {
+    font-size: 20px;
+    background-color: rgba(0, 0, 0, 0.03) ;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid #005a81 ;
+    outline: none;
+}
+
+.form .ligne textarea {
+    width: 100%;
+    border: 1px solid #005a81;
+    outline: none;
+    background-color: rgba(0, 0, 0, 0.03) ;
+}
+
+.form .ligne .ligne-form {
+    height: 36px;
+    width: 100%;
+}
+
+.form .ligne-btn {
+    display: flex;
+    justify-content: center;
+}
+
+.offre-card {
+    background-color: #FFF /* rgba(0, 0, 0, 0.03) */ ;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 5px;
+}
+
+.head h2{
+    font-size: 45px;
+    font-family: monospace;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 5px;
+}
+
+.head p {
+    text-align: center;
+    font-size: 18px;
+    font-family: monospace;
+}
+
+.offre-image {
+    border-bottom: 1px solid rgba(0,0,0,0.3);
+    padding-bottom: 15px;
+}
+
+.offre-image img{
+    height: 300px ;
+    width: 100%;
+}
+
+.offre-description {
+    padding: 20px;
+    font-family: sans-serif;
+}
+
+.offre-description span {
+    padding: 3px; 
+}
+
+.offre-description .job-desc {
+    min-height: 100px;
+}
+
+
+@media (max-width : 768px) {
+    header {
+        width: 100%;
+        position: fixed !important;
+        top: 0;
+    }
+    
+    .navbar label{
+        display: block;
+    }
+    
+    .navbar ul{
+        position: fixed;
+        width: 60%;
+        height: 100vh;
+        background: #EFEFEF ;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        padding: 50px  20px 0px 20px;
+        border-right: 1px solid rgba(0, 0, 0, 0.2);
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    .navbar ul li{
+        text-align: start;
+        height: 50px;
+        width: 100%;
+        margin-bottom: 20px;
+        border-bottom: 1.5px solid rgba(0,0,0,0.2);
+    }
+
+    .navbar ul li a{
+        color: #005a81;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 50px;
+    }
+
+    .navbar ul li a:hover {
+        background-color: rgba(0,0,0,0.1);
+    }
+
+    .navbar #check:checked ~ ul {
+        left: 0;
+    }
+
+
+    .image {
+        display: none;
+    }
+
+} 
